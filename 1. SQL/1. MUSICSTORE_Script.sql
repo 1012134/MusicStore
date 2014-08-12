@@ -4,7 +4,7 @@ create database MUSIC_STORE
 go
 use MUSIC_STORE
 go
-
+ALTER AUTHORIZATION ON DATABASE::MUSIC_STORE TO [sa];
 /*== Genre ==*/
 
 create table Genre
