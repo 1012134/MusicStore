@@ -43,6 +43,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -177,7 +179,49 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Album.cs">
+      <DependentUpon>MSDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Composer.cs">
+      <DependentUpon>MSDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Genre.cs">
+      <DependentUpon>MSDatabase.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\MSDatabase.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MSDatabase.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSDatabase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MSDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MSDatabase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MSDatabase.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Order.cs">
+      <DependentUpon>MSDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Publisher.cs">
+      <DependentUpon>MSDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Singer.cs">
+      <DependentUpon>MSDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Song.cs">
+      <DependentUpon>MSDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>MSDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserAccount.cs">
+      <DependentUpon>MSDatabase.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -189,6 +233,23 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\MSDatabase.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MSDatabase.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\MSDatabase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MSDatabase.edmx</DependentUpon>
+      <LastGenOutput>MSDatabase.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\MSDatabase.edmx.diagram">
+      <DependentUpon>MSDatabase.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\MSDatabase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MSDatabase.edmx</DependentUpon>
+      <LastGenOutput>MSDatabase.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -237,6 +298,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
