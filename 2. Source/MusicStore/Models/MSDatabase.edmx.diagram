@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6a36d460174f49f08b39ff49d62083ce" Name="Diagram1">
+        <EntityTypeShape EntityType="MUSIC_STOREModel.Album" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MUSIC_STOREModel.Composer" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MUSIC_STOREModel.Genre" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MUSIC_STOREModel.Order" Width="1.5" PointX="7.5" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MUSIC_STOREModel.Publisher" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MUSIC_STOREModel.Singer" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MUSIC_STOREModel.Song" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MUSIC_STOREModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MUSIC_STOREModel.UserAccount" Width="1.5" PointX="5.25" PointY="11.75" IsExpanded="true" />
+        <AssociationConnector Association="MUSIC_STOREModel.fk_Album_Genre" ManuallyRouted="false" />
+        <AssociationConnector Association="MUSIC_STOREModel.fk_Album_Publisher" ManuallyRouted="false" />
+        <AssociationConnector Association="MUSIC_STOREModel.fk_Song_Composer" ManuallyRouted="false" />
+        <AssociationConnector Association="MUSIC_STOREModel.fk_Song_Genre" ManuallyRouted="false" />
+        <AssociationConnector Association="MUSIC_STOREModel.FK_Order_UserAccount" ManuallyRouted="false" />
+        <AssociationConnector Association="MUSIC_STOREModel.fk_Song_Singer" ManuallyRouted="false" />
+        <AssociationConnector Association="MUSIC_STOREModel.Album_Song" ManuallyRouted="false" />
+        <AssociationConnector Association="MUSIC_STOREModel.Order_Album" ManuallyRouted="false" />
+        <AssociationConnector Association="MUSIC_STOREModel.WishList" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
