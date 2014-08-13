@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MusicStore.Models;
 
 namespace MusicStore.Controllers
 {
     public class HomeController : Controller
     {
+        MUSIC_STOREEntities Db = new MUSIC_STOREEntities();
         public ActionResult Index()
         {
-            return View();
+            List<Album> listAlbum = Db.Albums.ToList();
+            return View(listAlbum);
         }
 
         public ActionResult About()

@@ -29,6 +29,8 @@ namespace MusicStore.Models
         public Nullable<int> BuyCounter { get; set; }
         public Nullable<int> IDGenre { get; set; }
         public Nullable<int> IDPublisher { get; set; }
+        public string Language { get; set; }
+        public Nullable<int> Price { get; set; }
     
         public virtual Genre Genre { get; set; }
         public virtual Publisher Publisher { get; set; }

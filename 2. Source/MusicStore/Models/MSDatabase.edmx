@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MUSIC_STOREModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="MUSIC_STOREModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Album">
           <Key>
             <PropertyRef Name="ID" />
@@ -17,6 +17,8 @@
           <Property Name="BuyCounter" Type="int" />
           <Property Name="IDGenre" Type="int" />
           <Property Name="IDPublisher" Type="int" />
+          <Property Name="Language" Type="nvarchar" MaxLength="10" />
+          <Property Name="Price" Type="int" />
         </EntityType>
         <EntityType Name="Album_Song">
           <Key>
@@ -59,6 +61,7 @@
           </Key>
           <Property Name="IDOrder" Type="int" Nullable="false" />
           <Property Name="IDAlbum" Type="int" Nullable="false" />
+          <Property Name="Quality" Type="int" />
         </EntityType>
         <EntityType Name="Publisher">
           <Key>
@@ -327,8 +330,7 @@
             <End Role="WishList" EntitySet="WishList" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MUSIC_STOREModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -349,6 +351,8 @@
           <NavigationProperty Name="Songs" Relationship="Self.Album_Song" FromRole="Album" ToRole="Song" />
           <NavigationProperty Name="Orders" Relationship="Self.Order_Album" FromRole="Album" ToRole="Order" />
           <NavigationProperty Name="UserAccounts" Relationship="Self.WishList" FromRole="Album" ToRole="UserAccount" />
+          <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Int32" />
         </EntityType>
         <EntityType Name="Composer">
           <Key>
@@ -582,6 +586,8 @@
           <EntitySetMapping Name="Albums">
             <EntityTypeMapping TypeName="MUSIC_STOREModel.Album">
               <MappingFragment StoreEntitySet="Album">
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Information" ColumnName="Information" />
