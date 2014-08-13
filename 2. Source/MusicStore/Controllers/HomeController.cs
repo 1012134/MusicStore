@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MusicStore.Models;
+using System.Net;
 
 namespace MusicStore.Controllers
 {
@@ -13,21 +14,25 @@ namespace MusicStore.Controllers
         public ActionResult Index()
         {
             List<Album> listAlbum = Db.Albums.ToList();
+            List<Genre> listGenre = Db.Genres.ToList();
+
+            ViewBag.listGenre = listGenre;
             return View(listAlbum);
         }
 
-        public ActionResult About()
+        public ActionResult Album(int? ID)
         {
-            ViewBag.Message = "Your application description page.";
+            if(ID == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Album item = Db.Albums.SingleOrDefault(t => t.ID == ID);
 
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            if(item == null)
+            {
+                return HttpNotFound();
+            }
+            return View(item);
         }
     }
 }

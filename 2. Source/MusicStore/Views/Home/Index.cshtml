@@ -1,6 +1,8 @@
-﻿@{
+﻿@model IEnumerable<MusicStore.Models.Album>
+
+@{
     ViewBag.Title = "Home Page";
-}
+ 
 
 <div class="row">
     <ul class="bxslider">
@@ -14,12 +16,16 @@
 <div class="row">
     <div class="col-md-2">
         <ul class="nav nav-pills nav-stacked">
-            <li class="active">
-                <a href="#">
-                    <span class="badge pull-right">42</span>
-                    GENRE
-                </a>
-            </li>
+            @foreach(var item in Model)
+            {
+                 <li class="active">
+                    <a href="#">
+                        <span class="badge pull-right">42</span>
+                        @item.Name
+                    </a>
+                </li>
+            }
+           
             ...
         </ul>
     </div>

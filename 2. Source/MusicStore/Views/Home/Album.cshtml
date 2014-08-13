@@ -1,0 +1,112 @@
+﻿@model MusicStore.Models.Album
+
+@{
+    ViewBag.Title = "Album";
+}
+
+<h2>Album</h2>
+
+<div>
+    <h4>Album</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Information)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Information)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LinkImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LinkImage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReleaseDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BuyCounter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BuyCounter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IDGenre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDGenre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IDPublisher)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDPublisher)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Language)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Language)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Songs)
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+                @foreach (var item in Model.Songs)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Genre.Name)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
