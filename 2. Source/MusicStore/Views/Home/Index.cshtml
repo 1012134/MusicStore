@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    //List<MusicStore.Models.Genre> listgenre = ViewBag.listGenre.ToList<MusicStore.Models.Genre>();
+}
+
+@Html.Partial("_SliderPartial")
+<div class="row">
+    <div class="col-md-2">
+        @Html.Partial("_LeftPartial")
+    </div>
+    <div class="col-md-8">
+
+    </div>
+    <div class="col-md-2">
+        @Html.Partial("_RightPartial")
+    </div>
+</div>
