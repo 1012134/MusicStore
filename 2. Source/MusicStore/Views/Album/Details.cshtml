@@ -1,14 +1,14 @@
 ﻿@model MusicStore.Models.Album
 
 @{
-    ViewBag.Title = "Album";
+    ViewBag.Title = "Details";
 }
 
-<h2>Album</h2>
+<h2>Details</h2>
 
 <div>
     <h4>Album</h4>
-    <hr />
+	<hr />
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Name)
@@ -51,22 +51,6 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.IDGenre)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.IDGenre)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.IDPublisher)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.IDPublisher)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Language)
         </dt>
 
@@ -83,27 +67,21 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Songs)
+            @Html.DisplayNameFor(model => model.Genre.Name)
         </dt>
+
         <dd>
-            <table class="table">
-                <tr>
-                    <th>Name</th>
-                    <th>Genre</th>
-                </tr>
-                @foreach (var item in Model.Songs)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Name)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Genre.Name)
-                        </td>
-                    </tr>
-                }
-            </table>
+            @Html.DisplayFor(model => model.Genre.Name)
         </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Publisher.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Publisher.Name)
+        </dd>
+
     </dl>
 </div>
 <p>

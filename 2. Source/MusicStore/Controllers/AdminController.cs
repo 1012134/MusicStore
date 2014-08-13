@@ -17,6 +17,9 @@ namespace MusicStore.Controllers
         }
 
 
+        ///////////
+        // Album //
+        ///////////
         public ActionResult AddAlbum()
         {
             return View();
@@ -74,5 +77,29 @@ namespace MusicStore.Controllers
         {
             return View();
         }
+
+        //////////
+        // Song //
+        //////////
+
+
+        ////////////
+        // Singer //
+        ////////////
+        
+
+        ///////////
+        // Genre //
+        ///////////
+
+        //////////////
+        // Composer //
+        //////////////
+
+        ///////////////
+        // Publisher //
+        ///////////////
+
+
 	}
 }
