@@ -1,0 +1,16 @@
+﻿@model IEnumerable<MusicStore.Models.Genre>
+@{
+    List<MusicStore.Models.Genre> listgenre = ViewBag.listGenre.ToList<MusicStore.Models.Genre>();
+    foreach (var genre in listgenre) {
+        <p>@genre.Name</p>
+    }
+}
+<ul class="nav nav-pills nav-stacked">
+    <li class="active">
+        <a href="#">
+            <span class="badge pull-right">42</span>
+            GENRE
+        </a>
+    </li>
+    ...
+</ul>

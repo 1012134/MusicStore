@@ -1,28 +1,17 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+    //List<MusicStore.Models.Genre> listgenre = ViewBag.listGenre.ToList<MusicStore.Models.Genre>();
 }
 
-<div class="row">
-    <ul class="bxslider">
-        <li><img src="~/Content/images/test/pic1.jpg" /></li>
-        <li><img src="~/Content/images/test/pic2.jpg" /></li>
-        <li><img src="~/Content/images/test/pic1.jpg" /></li>
-        <li><img src="~/Content/images/test/pic2.jpg" /></li>
-    </ul>
-</div>
-
+@Html.Partial("_SliderPartial")
 <div class="row">
     <div class="col-md-2">
-        <ul class="nav nav-pills nav-stacked">
-            <li class="active">
-                <a href="#">
-                    <span class="badge pull-right">42</span>
-                    GENRE
-                </a>
-            </li>
-            ...
-        </ul>
+        @Html.Partial("_LeftPartial")
     </div>
-    <div class="col-md-8">.col-md-8</div>
-    <div class="col-md-2">.col-md-2</div>
+    <div class="col-md-8">
+
+    </div>
+    <div class="col-md-2">
+        @Html.Partial("_RightPartial")
+    </div>
 </div>
