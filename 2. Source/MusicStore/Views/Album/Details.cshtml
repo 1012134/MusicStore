@@ -4,87 +4,91 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<div class="panel panel-primary no-border">
+    <div class="panel-heading bg">
+        BREADCRUMB HERE!
+    </div>
+    <div class="panel-body">
 
-<div>
-    <h4>Album</h4>
-	<hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+        <h2 class="title-center">@ViewBag.Title</h2>
+        <div class="alert alert-info" role="alert">This is the information about album: @Html.DisplayFor(model => model.Name)</div>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Information)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Information)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Information)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Information)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LinkImage)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.LinkImage)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.LinkImage)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.LinkImage)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ReleaseDate)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ReleaseDate)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ReleaseDate)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ReleaseDate)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.BuyCounter)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.BuyCounter)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.BuyCounter)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.BuyCounter)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Language)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Language)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Language)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Language)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Genre.Name)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Genre.Name)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Genre.Name)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Genre.Name)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Publisher.Name)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Publisher.Name)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Publisher.Name)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Publisher.Name)
+            </dd>
 
-    </dl>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

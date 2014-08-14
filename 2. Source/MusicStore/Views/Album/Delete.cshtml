@@ -3,94 +3,104 @@
 @{
     ViewBag.Title = "Delete";
 }
+<div class="panel panel-primary no-border">
+    <div class="panel-heading bg">
+        BREADCRUMB HERE!
+    </div>
+    <div class="panel-body">
 
-<h2>Delete</h2>
+        <h2 class="title-center">@ViewBag.Title</h2>
+        <div class="alert alert-danger" role="alert">Warning! Are you sure you want to delete this album: @Html.DisplayFor(model => model.Name) ?</div>
+        <div>
+            <h4>@Html.DisplayFor(model => model.Name)</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Album</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+                <dt>
+                    Description
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Information)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Information)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Information)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.LinkImage)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LinkImage)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.LinkImage)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.LinkImage)
-        </dd>
+                <dt>
+                    Released date
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ReleaseDate)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.ReleaseDate)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.ReleaseDate)
-        </dd>
+                <dt>
+                    Buy times
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.BuyCounter)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.BuyCounter)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.BuyCounter)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Language)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Language)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Language)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Language)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Price)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Price)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
+                <dt>
+                    Genre
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Genre.Name)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Genre.Name)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Genre.Name)
-        </dd>
+                <dt>
+                    Publisher
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Publisher.Name)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Publisher.Name)
+                </dd>
+                <dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Publisher.Name)
-        </dd>
+                </dt>
+                <dd>
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
 
-    </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+                        <div class="form-actions no-color">
+                            <input type="submit" value="Delete" class="btn btn-danger" />
+                        </div>
+                    }
+                </dd>                                  
+            </dl>            
         </div>
-    }
+        @Html.ActionLink("Back to List", "Index")
+    </div>
 </div>
