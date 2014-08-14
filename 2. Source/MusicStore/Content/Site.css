@@ -105,3 +105,6 @@ input[type="checkbox"].input-validation-error {
     background: url("images/footer-bg.png") no-repeat right;
     height: 162px;
 }
+.album-title {
+    text-align: center;
+}

@@ -10,9 +10,9 @@
         {
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <img src="@item.LinkImage" alt="@item.Name">
+                    <img src="~/Content/images/album/@item.LinkImage" alt="@item.Name">
                     <div class="caption">
-                        <h3>@item.Name</h3>
+                        <h3><a href="~/Home/Album?ID=@item.ID">@item.Name</a></h3>
                         <p>@item.Information</p>
                         <p><a href="#" class="btn btn-primary" role="button">Buy</a> <a href="#" class="btn btn-default" role="button">Add</a></p>
                     </div>
