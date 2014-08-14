@@ -188,6 +188,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201408140337257_InitialCreate.cs" />
+    <Compile Include="Migrations\201408140337257_InitialCreate.Designer.cs">
+      <DependentUpon>201408140337257_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Album.cs">
       <DependentUpon>MusicStoreModel.tt</DependentUpon>
@@ -244,12 +249,19 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\album\totalcover.jpg" />
+    <Content Include="Content\images\bg-3.png" />
     <Content Include="Content\images\bg-nav-2.png" />
     <Content Include="Content\images\bg-nav.png" />
     <Content Include="Content\images\bg-theme.jpg" />
     <Content Include="Content\images\bx_loader.gif" />
     <Content Include="Content\images\controls.png" />
+    <Content Include="Content\images\footer-bg.png" />
+    <Content Include="Content\images\genre\totalcover.jpg" />
+    <Content Include="Content\images\header-logo.png" />
     <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\ms-logo.png" />
+    <Content Include="Content\images\publisher\totalcover.jpg" />
     <Content Include="Content\images\test\pic1.jpg" />
     <Content Include="Content\images\test\pic2.jpg" />
     <Content Include="Content\jquery.bxslider.css" />
@@ -352,6 +364,11 @@
     <Content Include="Views\Genre\Details.cshtml" />
     <Content Include="Views\Genre\Edit.cshtml" />
     <Content Include="Views\Genre\Index.cshtml" />
+    <Content Include="Views\Shared\_IndexBodyPartial.cshtml" />
+    <Content Include="Views\Shared\_LeftPartial.cshtml" />
+    <Content Include="Views\Shared\_RightPartial.cshtml" />
+    <Content Include="Views\Shared\_SliderPartial.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -367,6 +384,11 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201408140337257_InitialCreate.resx">
+      <DependentUpon>201408140337257_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
