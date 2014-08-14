@@ -87,16 +87,21 @@ input[type="checkbox"].input-validation-error {
 .no-border {
     border-color: #A5A5A5;
 }
+
 .center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 .header-logo {
     background: url("images/ms-logo.png");
     width: 200px;
     height: 48px;
 }
+
 .footer-design {
     color: white;
+    background: url("images/footer-bg.png") no-repeat right;
+    height: 162px;
 }
