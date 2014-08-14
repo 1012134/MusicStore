@@ -12,21 +12,13 @@ namespace MusicStore.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class UserAccount
+    public partial class AspNetUserClaim
     {
-        public UserAccount()
-        {
-            this.Orders = new HashSet<Order>();
-        }
+        public int Id { get; set; }
+        public string ClaimType { get; set; }
+        public string ClaimValue { get; set; }
+        public string User_Id { get; set; }
     
-        public string UserName { get; set; }
-        public string Facebook { get; set; }
-        public Nullable<int> Money { get; set; }
-        public string Addresss { get; set; }
-        public string Phone { get; set; }
-        public string Email { get; set; }
-        public string FullName { get; set; }
-    
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual AspNetUser AspNetUser { get; set; }
     }
 }

@@ -12,21 +12,16 @@ namespace MusicStore.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class UserAccount
+    public partial class AspNetRole
     {
-        public UserAccount()
+        public AspNetRole()
         {
-            this.Orders = new HashSet<Order>();
+            this.AspNetUsers = new HashSet<AspNetUser>();
         }
     
-        public string UserName { get; set; }
-        public string Facebook { get; set; }
-        public Nullable<int> Money { get; set; }
-        public string Addresss { get; set; }
-        public string Phone { get; set; }
-        public string Email { get; set; }
-        public string FullName { get; set; }
+        public string Id { get; set; }
+        public string Name { get; set; }
     
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<AspNetUser> AspNetUsers { get; set; }
     }
 }
