@@ -12,21 +12,11 @@ namespace MusicStore.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class UserAccount
+    public partial class C__MigrationHistory
     {
-        public UserAccount()
-        {
-            this.Orders = new HashSet<Order>();
-        }
-    
-        public string UserName { get; set; }
-        public string Facebook { get; set; }
-        public Nullable<int> Money { get; set; }
-        public string Addresss { get; set; }
-        public string Phone { get; set; }
-        public string Email { get; set; }
-        public string FullName { get; set; }
-    
-        public virtual ICollection<Order> Orders { get; set; }
+        public string MigrationId { get; set; }
+        public string ContextKey { get; set; }
+        public byte[] Model { get; set; }
+        public string ProductVersion { get; set; }
     }
 }

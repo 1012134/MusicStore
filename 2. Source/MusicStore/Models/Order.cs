@@ -20,10 +20,11 @@ namespace MusicStore.Models
         }
     
         public int ID { get; set; }
-        public string Username { get; set; }
+        public string IDUser { get; set; }
         public System.DateTime CreatedDate { get; set; }
         public int Money { get; set; }
     
+        public virtual AspNetUser AspNetUser { get; set; }
         public virtual ICollection<Order_Album> Order_Album { get; set; }
         public virtual UserAccount UserAccount { get; set; }
     }

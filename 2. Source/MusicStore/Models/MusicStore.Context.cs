@@ -25,7 +25,12 @@ namespace MusicStore.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
         public virtual DbSet<Album> Albums { get; set; }
+        public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
+        public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
+        public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
+        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
         public virtual DbSet<Composer> Composers { get; set; }
         public virtual DbSet<Genre> Genres { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
@@ -33,6 +38,7 @@ namespace MusicStore.Models
         public virtual DbSet<Publisher> Publishers { get; set; }
         public virtual DbSet<Singer> Singers { get; set; }
         public virtual DbSet<Song> Songs { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<UserAccount> UserAccounts { get; set; }
     }
 }
