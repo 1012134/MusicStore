@@ -16,8 +16,8 @@ namespace MusicStore.Models
     {
         public Album()
         {
+            this.Order_Album = new HashSet<Order_Album>();
             this.Songs = new HashSet<Song>();
-            this.Orders = new HashSet<Order>();
             this.UserAccounts = new HashSet<UserAccount>();
         }
     
@@ -34,8 +34,8 @@ namespace MusicStore.Models
     
         public virtual Genre Genre { get; set; }
         public virtual Publisher Publisher { get; set; }
+        public virtual ICollection<Order_Album> Order_Album { get; set; }
         public virtual ICollection<Song> Songs { get; set; }
-        public virtual ICollection<Order> Orders { get; set; }
         public virtual ICollection<UserAccount> UserAccounts { get; set; }
     }
 }

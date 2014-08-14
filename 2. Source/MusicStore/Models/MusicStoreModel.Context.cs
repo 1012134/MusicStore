@@ -29,10 +29,10 @@ namespace MusicStore.Models
         public virtual DbSet<Composer> Composers { get; set; }
         public virtual DbSet<Genre> Genres { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Order_Album> Order_Album { get; set; }
         public virtual DbSet<Publisher> Publishers { get; set; }
         public virtual DbSet<Singer> Singers { get; set; }
         public virtual DbSet<Song> Songs { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<UserAccount> UserAccounts { get; set; }
     }
 }

@@ -16,7 +16,7 @@ namespace MusicStore.Models
     {
         public Order()
         {
-            this.Albums = new HashSet<Album>();
+            this.Order_Album = new HashSet<Order_Album>();
         }
     
         public int ID { get; set; }
@@ -24,7 +24,7 @@ namespace MusicStore.Models
         public System.DateTime CreatedDate { get; set; }
         public int Money { get; set; }
     
+        public virtual ICollection<Order_Album> Order_Album { get; set; }
         public virtual UserAccount UserAccount { get; set; }
-        public virtual ICollection<Album> Albums { get; set; }
     }
 }

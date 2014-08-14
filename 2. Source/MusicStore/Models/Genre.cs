@@ -23,6 +23,7 @@ namespace MusicStore.Models
         public int ID { get; set; }
         public string Name { get; set; }
         public string LinkImage { get; set; }
+        public string Description { get; set; }
     
         public virtual ICollection<Album> Albums { get; set; }
         public virtual ICollection<Song> Songs { get; set; }
